@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: nodejs-app
+    ports:
+      - "3000:3000"   # this will map container's port 3000 to local machine's port 3000
+    volumes:
+      - .:/src/app     # this will mount the current directory to the container
+
